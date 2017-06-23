@@ -13,8 +13,11 @@ class ArticlesController < ApplicationController
 
   def create
     @articles = Article.new(articles_params)
-    @articles.save
-    redirect_to @articles
+    if @articles.save
+      redirect_to @articles
+    else
+      render 'new'
+    end
   end
 
   private
