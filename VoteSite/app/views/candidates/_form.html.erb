@@ -1,0 +1,10 @@
+<%= form_for(@candidate) do |f| %>
+
+    姓名：<%= f.text_field :name %><br>
+    年龄：<%= f.text_field :age %><br>
+    政党：<%= f.text_field :party %><br>
+    政见：<%= f.text_area :politics %>
+    <%= f.submit '提交' %>
+<% end %>
+
+<%= link_to 'Back', candidates_url %>

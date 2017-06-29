@@ -724,3 +724,18 @@ Processing by CalculatorController#result as HTML
 Completed 200 OK in 216ms (Views: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-29 15:35:51 +0800
+Processing by CalculatorController#index as HTML
+  Rendering calculator/index.html.erb within layouts/application
+  Rendered calculator/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 436ms (Views: 203.3ms)
+
+
+Started POST "/calculator/result" for 127.0.0.1 at 2017-06-29 15:35:58 +0800
+Processing by CalculatorController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kRddQdtNjS8lkxw0gIPoQfiKe7QC+TXlf3o/Y6kTuBUNVrA0ePbjK+nJgo9oDXw3FbKVboq8f03D1Rcxzzyamg==", "height"=>"170", "weight"=>"60", "commit"=>"开始计算"}
+  Rendering calculator/result.html.erb within layouts/application
+  Rendered calculator/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 21.9ms)
+
+
