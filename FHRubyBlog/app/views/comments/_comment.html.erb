@@ -1,0 +1,5 @@
+<li>
+  <%= comment.commenter + '：' + comment.body %>
+</li>
+
+<td><%= link_to 'Delete', [comment.article, comment], method: :delete, data: {confirm: 'Are you sure?' } %></td>

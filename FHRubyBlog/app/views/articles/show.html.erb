@@ -8,27 +8,14 @@
   <%= @articles.text %>
 </p>
 
-<ul>
-  <% @articles.comments.each do |f| %>
-      <%= f.body %>
-  <% end %>
-</ul>
+<h2>Comments</h2>
+<ol>
+    <%= render @articles.comments %>
+</ol>
 
 <h2>Add a comment:</h2>
+<%= render  'comments/form' %>
 
-<%= form_for([@articles, @articles.comments.build]) do |f| %>
-    <p>
-      <%= f.label :commenter%>
-      <%= f.text_field :commenter %>
-    </p>
-    <p>
-      <%= f.label :body %>
-      <%= f.text_area :body %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-<% end %>
 
 <%= link_to 'Edit', edit_article_path(@articles) %>
 <%= link_to 'Back', articles_path %>
