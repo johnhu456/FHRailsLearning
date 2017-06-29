@@ -1,0 +1,10 @@
+<h1>BMI计算机</h1>
+
+<%= form_tag '/calculator/result' do %>
+  身高：<%= text_field_tag :height %> 公分<br>
+  体重：<%= text_field_tag :weight %> 公斤<br>
+  <%= submit_tag '开始计算' %>
+<% end %>
+
+
+
